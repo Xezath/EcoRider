@@ -49,3 +49,30 @@ Referencias:
 https://spring.io/guides/gs/rest-service/
 https://spring.io/guides/gs/accessing-data-jpa/
 https://docs.spring.io/spring-data/jpa/docs/1.6.0.RELEASE/reference/html/jpa.repositories.html
+
+
+****************************************************
+API Endpoints Disponibles
+****************************************************
+
+MÓDULO DE VEHÍCULOS:
+- GET /api/vehiculos/listar - Listar todos los vehículos
+- GET /api/vehiculos/{id} - Obtener vehículo por ID
+- POST /api/vehiculos/crear - Crear nuevo vehículo
+- PUT /api/vehiculos/actualizar/{id} - Actualizar vehículo
+- DELETE /api/vehiculos/eliminar/{id} - Eliminar vehículo
+
+MÓDULO DE VIAJES:
+- GET /api/viajes/listar - Listar todos los viajes (con filtros opcionales: origen, destino)
+- GET /api/viajes/{id} - Obtener viaje por ID
+- POST /api/viajes/crear - Crear nuevo viaje
+- PUT /api/viajes/actualizar/{id} - Actualizar viaje
+- DELETE /api/viajes/eliminar/{id} - Eliminar viaje
+
+MÓDULO DE USUARIOS:
+- GET /api/usuarios/{id} - Obtener información de un usuario específico
+- PUT /api/usuarios/{id} - Actualizar información de un usuario
+
+MÓDULO DE RESERVAS:
+- POST /api/reservas - Crear una nueva reserva
+- DELETE /api/reservas/{id} - Eliminar una reserva (cancelar viaje)
