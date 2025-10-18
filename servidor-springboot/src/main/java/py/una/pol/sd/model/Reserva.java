@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import java.time.LocalDate;
 
 @Entity
 public class Reserva {
@@ -15,11 +17,12 @@ public class Reserva {
     private Long usuarioId; // relación simple con Usuario
     private Long viajeId; // relación simple con Viaje
     private String estado; // "pendiente", "confirmada", "cancelada"
-    private String fechaReserva;
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    private LocalDate fechaReserva;
 
     public Reserva() {}
 
-    public Reserva(Long usuarioId, Long viajeId, String estado, String fechaReserva) {
+    public Reserva(Long usuarioId, Long viajeId, String estado, LocalDate fechaReserva) {
         this.usuarioId = usuarioId;
         this.viajeId = viajeId;
         this.estado = estado;
@@ -39,6 +42,6 @@ public class Reserva {
     public String getEstado() { return estado; }
     public void setEstado(String estado) { this.estado = estado; }
 
-    public String getFechaReserva() { return fechaReserva; }
-    public void setFechaReserva(String fechaReserva) { this.fechaReserva = fechaReserva; }
+    public LocalDate getFechaReserva() { return fechaReserva; }
+    public void setFechaReserva(LocalDate fechaReserva) { this.fechaReserva = fechaReserva; }
 }
